@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %} {% block title %}Add Product{% endblock %} {%
+block body %}
+<div class="form_wrap">
+  <form action="{{ path('add_product_exe_route') }}" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" />
+    <label for="weight">Weight:</label>
+    <input type="number" name="weight" />
+    <label for="category">Category:</label>
+    <input type="number" name="category" />
+    <input type="submit" value="envoyer" />
+  </form>
+</div>
+{% endblock %}

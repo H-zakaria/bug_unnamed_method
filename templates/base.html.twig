@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle` and uncomment the
+    following Encore helpers to start using Symfony UX #} {% block stylesheets%}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+
+    {% endblock %}
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <nav id="nav">
+        <ul>
+          <li><a href="{{ path('all_products_route') }}">All products |</a></li>
+          <li>
+            <a href="{{ path('add_product_route') }}">Add a product</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    {% block body %}{% endblock %} {% block javascripts %}
+    <script src="{{ asset('assets/js/jquery-3.6.0.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    {% endblock %}
+  </body>
+</html>

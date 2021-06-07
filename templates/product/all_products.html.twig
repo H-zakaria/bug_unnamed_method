@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %} {% block title %} Produits {% endblock %} {%
+block body %}
+<div class="table_wrap">
+  <table>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>weight</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for product in products %}
+    <tr>
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>
+        {% if product.weight == null %} unknown {% else %}
+        {{ product.weight }}
+        {% endif %}
+      </td>
+      <td class="button_td">
+        <div>
+          <input
+            type="button"
+            onclick="window.location.href='details/{{ product.name }}'"
+            value="Details"
+          />
+        </div>
+      </td>
+      <td class="button_td">
+        <div>
+          <input
+            type="button"
+            class="supr_btn"
+            name="{{ product.id }}"
+            value="Supprimer"
+          />
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

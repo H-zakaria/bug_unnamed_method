@@ -1,0 +1,105 @@
+body {
+  background: url('../img/bridge-wallpapers-2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: green;
+  text-decoration: none;
+}
+.table_wrap {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: flex-start;
+  justify-content: center;
+}
+table {
+  margin-top: 100px;
+  width: 60%;
+  text-align: center;
+  border: none;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px 5px;
+  font-size: 25px;
+}
+tr {
+  background-color: rgb(87, 86, 86);
+}
+tr:nth-child(2) {
+  background-color: rgb(54, 54, 54);
+}
+tr:hover {
+  background-color: rgb(69, 99, 145);
+}
+th {
+  padding: 10px 5px;
+  background-color: #000;
+  color: white;
+  text-transform: uppercase;
+}
+.button_td {
+  width: 100px;
+  height: 50px;
+  padding: 0;
+}
+.button_td div {
+  height: 100%;
+  width: 100px;
+}
+.button_td div input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 211, 68, 0.486);
+  color: white;
+  font-size: medium;
+  border: none;
+}
+.button_td div input:hover {
+  cursor: pointer;
+  background-color: rgba(16, 116, 38, 0.486);
+}
+.nav_wrap {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#nav {
+  width: 70%;
+  overflow: hidden;
+}
+#nav a {
+  color: black;
+  font-size: 30px;
+  padding: 38px 10px;
+  display: block;
+  overflow: hidden;
+}
+#nav a:hover {
+  color: green;
+}
+#nav ul {
+  display: flex;
+}
+#nav ul li {
+  overflow: hidden;
+}
+body > div.table_wrap > table > tbody > tr > td > div > input.supr_btn {
+  background-color: crimson;
+  color: #fff;
+}
